@@ -121,7 +121,8 @@
             <!-- The user image in the navbar-->
             <img src="https://dl.dropboxusercontent.com/u/61927534/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
             <!-- hidden-xs hides the username on small devices so only the image appears. -->
-            <span class="hidden-xs">Alexander Pierce</span>
+            <span class="hidden-xs">{{{ isset(Auth::user()->name) ? Auth::user()->name : Auth::user()->email }}}
+</span>
           </a>
           <ul class="dropdown-menu">
             <!-- The user image in the menu -->
@@ -129,7 +130,8 @@
               <img src="https://dl.dropboxusercontent.com/u/61927534/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
               <p>
-                Alexander Pierce - Web Developer
+                {{{ isset(Auth::user()->name) ? Auth::user()->name : Auth::user()->email }}}
+
                 <small>Member since Nov. 2012</small>
               </p>
             </li>

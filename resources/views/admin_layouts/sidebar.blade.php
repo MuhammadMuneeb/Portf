@@ -1,5 +1,5 @@
 <!-- Left side column. contains the logo and sidebar -->
-<aside class="main-sidebar">
+<aside class="main-sidebar" style="width:17.5%;">
 
   <!-- sidebar: style can be found in sidebar.less -->
   <section class="sidebar">
@@ -10,7 +10,8 @@
         <img src="https://dl.dropboxusercontent.com/u/61927534/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
       </div>
       <div class="pull-left info">
-        <p>Alexander Pierce</p>
+        <p>{{{ isset(Auth::user()->name) ? Auth::user()->name : Auth::user()->email }}}
+</p>
         <!-- Status -->
         <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
       </div>
