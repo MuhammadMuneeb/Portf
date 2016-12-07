@@ -16,12 +16,12 @@ class Portfolio extends Migration
         Schema::create('portfolio', function(Blueprint $table){
           $table->increments('id');
           $table->string('Name');
-          $table->string('Client review');
-          $table->date('Project Date');
-          $table->string('Technology used');
-          $table->string('Project Link');
-          $table->binary('Featured Images');
-          $table->binary('Alt Image');
+          $table->string('Client_Review');
+          $table->date('Project_Date');
+          $table->string('Technology_used');
+          $table->string('Project_Link');
+          $table->string('Featured_Image_URL');
+          $table->string('Alt_Image_URL');
           $table->timestamps();
         });
     }
@@ -33,6 +33,6 @@ class Portfolio extends Migration
      */
     public function down()
     {
-        Scheme::drop('portfolio');
+        Schema::drop('portfolio');
     }
 }

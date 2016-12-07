@@ -9,6 +9,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>{{ $page_title or "Admin Dashboard" }}</title>
   <!-- Tell the browser to be responsive to screen width -->
+  <!-- CSRF Token -->
+<meta name="csrf-token" content="{{ csrf_token() }}">
+
+<!-- Scripts -->
+<script>
+    window.Laravel = <?php echo json_encode([
+        'csrfToken' => csrf_token(),
+    ]); ?>
+</script>
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
   <link rel="stylesheet" href="https://dl.dropboxusercontent.com/u/61927534/bootstrap/css/bootstrap.min.css">

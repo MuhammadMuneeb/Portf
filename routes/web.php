@@ -18,7 +18,24 @@ Route::get('/', function () {
 Route::get('admin', function(){
   return view('admin');
 });
+// Route::get('addportfolio', function(){
+//   return view('inputForm');
+// });
+//
+// Route::post('addportfolio', function(){
+//   return view('inputForm');
+//});
+
+Route::get('portfolio', 'PortfolioController@index');
+Route::post('saveportfolio', 'PortfolioController@store');
+//
+// Route::post('addportfolio', 'PortfolioController@index');
+// Route::get('addportfolio', 'PortfolioController@index');
+//
+// Route::post('saveportfolio', 'PortfolioController@store');
 
 Auth::routes();
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
 Route::get('/home', 'HomeController@index');
+Route::post('/home', 'HomeController@index');
